@@ -35,3 +35,38 @@ function goToSlide(index) {
   show_Slide(slideIndex);
   slide_initializer();
 }
+
+const BlockSlides = document.querySelector(".BlockSlides");
+const testimonials = document.querySelectorAll(".BlockSlides .imageBlock");
+
+let blockIndex = 0;
+let blockInterval = null;
+
+document.addEventListener("DOMContentLoaded", Block_initializer);
+
+function Block_initializer() {
+  if (testimonials.length > 0) {
+    blockInterval = setInterval(NextBlock, 3000);
+  }
+}
+
+function Show_Block(index) {
+  if (index >= testimonials.length) {
+    blockIndex = 0;
+  } else if (index < 0) {
+    blockIndex = testimonials.length - 1;
+  } else {
+    blockIndex = index;
+  }
+
+  BlockSlides.style.transform = `translateX(-${blockIndex * 100}%)`;
+}
+
+function prevBlock() {
+  clearInterval(blockInterval);
+  Show_Block(blockIndex-1)
+}
+
+function NextBlock() {
+  Show_Block(blockIndex+1)
+}
