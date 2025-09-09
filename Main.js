@@ -64,9 +64,62 @@ function Show_Block(index) {
 
 function prevBlock() {
   clearInterval(blockInterval);
-  Show_Block(blockIndex-1)
+  Show_Block(blockIndex - 1);
 }
 
 function NextBlock() {
-  Show_Block(blockIndex+1)
+  Show_Block(blockIndex + 1);
 }
+const discoverImageArea = document.querySelectorAll(".discoverImageArea img");
+const message_Area = document.querySelectorAll(".messageArea p");
+const Discover_DIVS = document.querySelectorAll(".Discover-DIVS .Slider-divs");
+let discover_Index = 0;
+let discover_Interval = null;
+
+function Update_Discover_Container(){
+  discoverImageArea.forEach((img,i) => {
+    img.classList.toggle("Display_Discover_Image", i === discover_Index);
+  });
+    message_Area.forEach((p,i) => {
+    p.classList.toggle("Active-message-Area", i === discover_Index);
+  });
+    Discover_DIVS.forEach((div,i) => {
+    div.classList.toggle("Active-div", i === discover_Index);
+  });
+}
+
+function Next_Discover_slide(){
+discover_Index = (discover_Index+1)%discoverImageArea.length;
+Update_Discover_Container();
+}
+function goToDiscover(index) {
+  discover_Index = index;
+  Update_Discover_Container();
+}
+function startSlider(){
+  discover_Interval = setInterval(Next_Discover_slide,3000)
+}
+function stopSlider(){
+  clearInterval(discover_Interval);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (discoverImageArea.length > 0) {
+    Update_Discover_Container();
+    startSlider();
+  }
+
+  Discover_DIVS.forEach((div, i) => {
+    div.addEventListener("mouseenter", () => {
+      stopSlider();   
+      goToDiscover(i); 
+    });
+
+    div.addEventListener("mouseleave", () => {
+      startSlider(); // resume auto slide
+    });
+  });
+});
+    function Extend() {
+      document.getElementById("sideNav").classList.toggle("active");
+    }
