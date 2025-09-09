@@ -1,5 +1,0 @@
-- [x] Fix typos in Main.css class names (e.g., banner-conatiner to banner-container)
-- [x] Add comments and improve formatting in Main.css
-- [x] Fix typos in index.html class names to match corrected CSS
-- [x] Fix any additional typos in index.html (e.g., Parnter to Partner)
-- [ ] Test the webpage to ensure styles apply correctly

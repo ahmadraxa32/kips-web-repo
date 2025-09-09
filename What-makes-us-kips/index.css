@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0 30px;
+  height: 110px;
+  box-shadow: 0 4px 7px black;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav li {
+  list-style: none;
+  font-size: 16px;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(46, 46, 96);
+  transition: all 0.6s ease;
+  transform: translateX(-50%);
+}
+.nav li:hover::after {
+  width: 100%;
+}
+
+/* Left nav (hamburger menu) */
+.left-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 60px;
+  box-shadow: 0 4px 7px black;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.Extendable {
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00366c;
+}
+
+/* Side nav */
+.displayLeftNav {
+  position: fixed;
+  left: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #00366c;
+  color: white;
+  z-index: 2000;
+  transition: left 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+.displayLeftNav.active {
+  left: 0;
+}
+.displayLeftNav ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+.displayLeftNav ul li {
+  margin: 25px 0;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.About-US-Container {
+  background-color: #00366c;
+  width: 100%;
+  height: 200px;
+}
+.AboutUSMain {
+  padding: 50px;
+  color: white;
+
+}
+.AboutUSMain h1 {
+  font-size: 40px;
+}
+.AboutUSMain small{
+  font-size: 16px;
+}
+
+/* minisection */
+
+.minisection {
+  display: flex;
+  flex-direction: row;
+  padding: 70px ;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.minisection-text h2{
+  color: #00366c;
+}
+.minisection-text p {
+  margin: 20px;
+  max-width: 77%;
+  line-height: 1.7;
+}
+.minisection-text ul li {
+  margin: 20px;
+  max-width: 77%;
+}
+.minisection2{
+  display: flex;
+  flex-direction: row;
+  padding: 70px;
+  align-items: center;
+  gap: 30%;
+
+}
+.minisection2-text h2{
+  color: #00366c;
+}
+.minisection2-text p {
+  margin: 20px;
+  line-height: 1.7;
+}
+.minisection2-text ul li {
+  margin: 20px;
+  max-width: 77%;
+}
+/* footer */
+footer {
+  background-color: #f0f5ff;
+  padding: 80px 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-container a {
+  font-size: 18px;
+  color: #00366c;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.footer-container a:hover {
+  text-decoration: underline;
+}
+.footer-h1 {
+  font-size: 25px;
+  color: #00366c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.ContactUs ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 0;
+}
+.ContactUs li {
+  list-style: none;
+  margin: 5px 0;
+  max-width: 100%;
+  cursor: pointer;
+}
+.ContactUs li:hover {
+  text-decoration: underline;
+}
+.Useful-links {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.FollowUs p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.FollowUs .icons-conatiner {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.fa-brands {
+  font-size: 29px;
+  color: white;
+  border-bottom-left-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.icons {
+  background-color: #00366c;
+  margin: 10px 0;
+  border-radius: 12px 12px 12px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons:hover {
+  opacity: 0.3;
+}
+@media (max-width: 426px) {
+  .nav {
+    display: none;
+  }
+  .left-nav {
+    display: flex;
+  }
+  .About-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+  .minisection{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .minisection2{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
