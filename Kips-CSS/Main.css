@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px 0 30px;
-  height: 90px;
+  padding: 30px 0 30px;
+  height: 110px;
   box-shadow: 0 4px 7px black;
   width: 100%;
   position: sticky;
@@ -47,6 +47,10 @@
 .nav li:hover::after {
   width: 100%;
 }
+.nav a{
+  color: black;
+  text-decoration: none;
+}
 
 /* Left nav (hamburger menu) */
 .left-nav {
@@ -67,13 +71,15 @@
   border: none;
   cursor: pointer;
   color: #00366c;
+    display: none;
+
 }
 
 /* Side nav */
 .displayLeftNav {
   position: fixed;
   left: -100%;
-  width: 70%;
+  width: 100%;
   max-width: 300px;
   height: 100%;
   background-color: #00366c;
@@ -650,6 +656,9 @@ footer {
   }
   .left-nav {
     display: flex;
+  }
+  .Extendable{
+    display: block;
   }
   .succes-story {
     flex-direction: column;
