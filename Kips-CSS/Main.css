@@ -15,7 +15,7 @@
   height: 110px;
   box-shadow: 0 4px 7px black;
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: white;
   z-index: 1000;
@@ -120,7 +120,6 @@
   z-index: 1;
   max-width: 100%;
   overflow: hidden;
-  margin-top: 115px;
 }
 .slides img {
   display: none;
@@ -931,4 +930,3 @@ footer {
     font-size: 24px;
   }
 }
-/* end */
