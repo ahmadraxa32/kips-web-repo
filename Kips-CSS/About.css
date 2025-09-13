@@ -14,7 +14,7 @@
   height: 110px;
   box-shadow: 0 4px 7px black;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: white;
   z-index: 1000;
