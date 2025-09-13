@@ -58,7 +58,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  height: 60px;
+  height: 90px;
   box-shadow: 0 4px 7px black;
   background-color: white;
   position: sticky;
@@ -656,6 +656,7 @@ footer {
   }
   .left-nav {
     display: flex;
+    
   }
   .Extendable{
     display: block;
@@ -721,7 +722,6 @@ footer {
   .FollowUs p {
     font-size: 14px;
   }
-  /* Adjust side nav width for small screens */
   .displayLeftNav {
     width: 80%;
     max-width: none;
@@ -730,16 +730,13 @@ footer {
     font-size: 20px;
     margin: 20px 0;
   }
-  /* Buttons in banner smaller on mobile */
   .banner-conatiner .btn-group button {
     width: 40px;
     height: 8px;
   }
-  /* Success story heading smaller */
   .heading2 {
     font-size: 28px;
   }
-  /* Reduce padding in sections */
   .babaSection {
     padding: 15px 10px;
   }
@@ -752,7 +749,6 @@ footer {
   .beacome-partner {
     padding: 30px 10px;
   }
-  /* Adjust testimonial text size */
   .text-holder1 p {
     font-size: 16px;
   }
@@ -762,14 +758,12 @@ footer {
   .text-holder1 .subheadiing {
     font-size: 16px;
   }
-  /* Make images fluid */
   .imageBlock img,
   .partner-image img,
   .About-image img {
     max-width: 100%;
     height: auto;
   }
-  /* Adjust discover project divs width */
   .Discover-DIVS {
     max-width: 100%;
     flex: 1 1 100%;
@@ -779,10 +773,116 @@ footer {
     flex: 1 1 100%;
     margin-top: 20px;
   }
-  /* Adjust what-makes-keys items width */
   .what-makes-keys .key1,
   .what-makes-keys .key2 {
     width: 100%;
     max-width: 300px;
   }
 }
+@media (max-width: 375px) {
+  .succes-story,
+  .partner-container,
+  .what-makes-keys,
+  .dispcoverFunctionArea {
+    flex-direction: column ;
+    gap: 20px;
+    margin: 0 10px ;
+  }
+
+  .success-story-data,
+  .About-image,
+  .partner-container .text-area,
+  .partner-image,
+  .what-makes-keys .key1,
+  .what-makes-keys .key2,
+  .Discover-DIVS,
+  .discoverImageArea {
+    flex: 1 1 100% ;
+    max-width: 100% ;
+    width: 100% ;
+    padding: 0 ;
+  }
+
+  .About-image img,
+  .partner-image img,
+  .imageBlock img,
+  .discoverImageArea img {
+    max-width: 100% ;
+    height: auto ;
+    display: block ;
+  }
+
+  .succes-story,
+  .partner-container,
+  .what-makes-keys,
+  .dispcoverFunctionArea {
+    margin-left: 0 ;
+    margin-right: 0 ;
+    padding-left: 10px ;
+    padding-right: 10px ;
+  }
+
+  /* Adjust font sizes */
+  .heading2 {
+    font-size: 28px ;
+  }
+  .text-holder1 p,
+  p {
+    font-size: 16px ;
+  }
+  .text-holder1 .heading-3 {
+    font-size: 24px ;
+  }
+  .text-holder1 .subheadiing {
+    font-size: 16px ;
+  }
+
+  /* Section padding */
+  .babaSection,
+  .DiscoverProjrcts,
+  .What-makes-us-kips,
+  .beacome-partner {
+    padding: 20px 10px ;
+  }
+
+  /* Navigation */
+  .nav {
+    display: none ;
+  }
+  .left-nav {
+    display: flex ;
+
+  }
+  .Extendable {
+    display: block ;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00366c;
+  }
+  .displayLeftNav {
+    width: 80% ;
+    max-width: none ;
+    height: 100vh ;
+    top: 0;
+    left: -100% ;
+    position: fixed ;
+    background-color: #00366c ;
+    padding: 40px 20px ;
+    transition: left 0.3s ease-in-out ;
+    z-index: 2000 ;
+    display: flex;
+    flex-direction: column ;
+  }
+  .displayLeftNav.active {
+    left: 0 ;
+  }
+  .displayLeftNav ul li {
+    font-size: 20px ;
+    margin: 20px 0 ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+    padding-bottom: 10px ;
+  }
+}
+
