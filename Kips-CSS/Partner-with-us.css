@@ -1,0 +1,205 @@
+/* Reset and base styles */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0 30px;
+  height: 110px;
+  box-shadow: 0 4px 7px black;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav li {
+  list-style: none;
+  font-size: 16px;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(46, 46, 96);
+  transition: all 0.6s ease;
+  transform: translateX(-50%);
+}
+.nav li:hover::after {
+  width: 100%;
+}
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Left nav (hamburger menu) */
+.left-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 90px;
+  box-shadow: 0 4px 7px black;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.Extendable {
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00366c;
+  display: none;
+}
+
+/* Side nav */
+.displayLeftNav {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #00366c;
+  color: white;
+  z-index: 2000;
+  transition: left 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  top: 0;
+}
+.displayLeftNav.active {
+  left: 0;
+}
+.displayLeftNav ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+.displayLeftNav ul li {
+  margin: 25px 0;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+.displayLeftNav li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Page-Header */
+
+.Page-header{
+ background: linear-gradient(90deg, #8c1d40 0%, #c03b55 100%);
+ color: white;
+    
+}
+
+.Page-header .container{
+    display: flex;
+    padding: 80px;
+    justify-content: space-between;
+}
+.Page-header .container .text{
+    max-width: 31rem;
+}
+.Page-header .container .text h1{
+    font-size: 43px;
+}
+.Page-header .container .text small{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.collaborate{
+    padding: 50px;
+    font-size: 18px;
+}
+.collaborate .container{
+        display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.collaborate .container .text h2{
+    color: #c03b55;
+}
+.collaborate .container .collaborate-img img{
+    max-width: 500px;
+    max-height: 500px;
+}
+.bg-pink {
+    background-color: #F1E8EB;
+    padding: 30px;
+    height: 250px;
+}
+.bg-pink .container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.bg-pink .container .blog-img{
+    background-color: #8c1d40;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 110px;
+    margin: 30px;
+    padding: 20px;
+}
+.Field-section .container{
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+.Field-section .container .Form{
+  display: flex;
+  flex-direction: column;
+}
+.Inline{
+  display: flex;
+}
+.Field-section .container .inputs input{
+  width: 300px;
+  height: 60px;
+  margin: 10px;
+  padding: 9px;
+  border-radius: 7px;
+  background-color: #F1E8EB;
+  border: 2px solid #F1E8EB;
+}
+.Field-section .container .inputs input::placeholder{
+    color: #c03b55;
+}
+.Field-section .container .Form .checkbox span{
+  height: 50px;
+  font-size: 20px;
+  margin: 20px;
+}
