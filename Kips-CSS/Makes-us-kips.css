@@ -272,9 +272,14 @@ footer {
   .minisection{
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
   }
   .minisection2{
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
+  }
+  .AboutUSMain{
+    padding: 30px;
   }
 }
